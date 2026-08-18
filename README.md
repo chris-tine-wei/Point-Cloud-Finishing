@@ -60,7 +60,7 @@ CloudCompare -O "<path\to\cloud.las>" -C_EXPORT_FMT LAS -SOR 6 1
 - First value is the number of neighbours used for the mean distance estimate
 - Second value is the standard deviation multiplier. A point is dropped when its mean distance exceeds the global mean plus this many standard deviations
 
-![Statistical Outlier Removal dialog](img/sor-filter.png)
+![Statistical Outlier Removal dialog](sor-filter.png)
 *The same two parameters in the GUI.*
 
 ### Beauty mask
