@@ -27,10 +27,10 @@ Point counts read from the LAS headers of each output file.
 | Statistical outlier removal, 6 neighbours at 1 sigma | 25,662,120 | 1,282,426 | 4.76% |
 | 2D crop to survey boundary | 10,408,958 | 16,535,588 | 61.37% |
 
-![Forest cloud before cleanup](img/point-cloud-3.png)
+![Forest cloud before cleanup](point-cloud-3.png)
 *Before. The fuzz standing off the canopy and below the ground surface is reconstruction noise.*
 
-![Forest cloud after statistical outlier removal](img/point-cloud-4.png)
+![Forest cloud after statistical outlier removal](point-cloud-4.png)
 *After statistical outlier removal at six neighbours and one sigma.*
 
 The noise filter is the conservative option, taking out roughly two points in every hundred. The statistical filter removes more than twice as many. Judged by eye the two results are close, and the noise filter gives more control at the cost of more parameters to set.
@@ -93,15 +93,3 @@ Testing on this survey, an absolute max error produced fewer surviving stray poi
 - Neither filter can recover detail that photogrammetry failed to reconstruct. They only remove points
 - The statistical filter has no concept of a surface, so it will trim genuine thin features such as branches and equipment railings
 - The boundary polygon is an input, not something this produces
-
-## Repository contents
-
-```
-├── README.md
-├── img/                  screenshots
-└── scripts/
-    ├── noise_filter.cmd
-    ├── sor_filter.cmd
-    ├── crop.cmd
-    └── all_steps.cmd
-```
